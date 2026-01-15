@@ -1,7 +1,7 @@
 # Creating two datasets: one of bike trips FROM the Beaches and the other of
 # bike trips TO the Beaches.
 
-# Combining monthly datasets into yearly datasets:
+# Combining monthly datasets into yearly datasets
 
 # 2021
 bikeshare_2021 <- list.files(pattern = "BikeShare_2021")
@@ -36,6 +36,9 @@ trips_to_beach_2021 <- bikeshare_2021 %>%
 trips_from_beach_2021 <- bikeshare_2021 %>%
   filter(Start.Station.Name %in% beach_bike_stations)
 
+rm(bikeshare_2021)
+gc()
+
 # 2022
 bikeshare_2022 <- list.files(pattern = "BikeShare_2022")
 bikeshare_2022 <- lapply(bikeshare_2022, read.csv)
@@ -68,6 +71,9 @@ trips_to_beach_2022 <- bikeshare_2022 %>%
 
 trips_from_beach_2022 <- bikeshare_2022 %>%
   filter(Start.Station.Name %in% beach_bike_stations)
+
+rm(bikeshare_2022)
+gc()
 
 # 2023
 bikeshare_2023 <- list.files(pattern = "BikeShare_2023")
@@ -102,6 +108,9 @@ trips_to_beach_2023 <- bikeshare_2023 %>%
 trips_from_beach_2023 <- bikeshare_2023 %>%
   filter(Start.Station.Name %in% beach_bike_stations)
 
+rm(bikeshare_2023)
+gc()
+
 # 2024
 bikeshare_2024 <- list.files(pattern = "BikeShare_2024")
 bikeshare_2024 <- lapply(bikeshare_2024, read.csv)
@@ -134,6 +143,9 @@ trips_to_beach_2024 <- bikeshare_2024 %>%
 
 trips_from_beach_2024 <- bikeshare_2024 %>%
   filter(Start.Station.Name %in% beach_bike_stations)
+
+rm(bikeshare_2024)
+gc()
 
 # Combining yearly datasets into the two separate datasets
 all_trips_to_beach <- bind_rows(trips_to_beach_2021,
