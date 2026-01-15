@@ -1,5 +1,5 @@
 # Extracting which bike stops are located in the Beach BIA using a sample from
-# January 2023 and February 2023 data.
+# January 2023 and February 2023 data
 
 neighbourhoods <- st_read("Neighbourhoods - 4326.geojson")
 
