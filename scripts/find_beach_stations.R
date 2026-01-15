@@ -33,7 +33,6 @@ bike_stations_coordinates <- st_as_sf(
 beach_bike_stations <- neighbourhoods %>%
   filter(AREA_SHORT_CODE == "063")
 
-
 beach_bike_stations <- st_join(
   bike_stations_coordinates, beach_bike_stations, join = st_within
 )
