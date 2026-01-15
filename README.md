@@ -5,7 +5,7 @@ The following repository, beachBIA_bikeshare, is an exploratory data analysis of
     -   bia_neighbourhoods.geojson: a dataset which stores spatial information about each BIA
     -   BikeShare_2021_01.csv - BikeShare_2024_09.csv: monthly datasets which contain BikeShare data 
 -   `scripts` contains the R scripts used to filter and spatially sort the data. 
--   `visualizations/results` contains the R scripts for creating graphs, as well as some numerical figures.
+-   `visualizations & results` contains the R scripts for creating graphs, as well as some numerical figures.
 ## Additional Notes
 This script can work with other BIAs, in order to perform new or comparative analysis.
 
